@@ -1,0 +1,5 @@
+Topological Sorting always in directed graph only.
+
+It always apply on DAG.
+
+DAG -> Directed Acyclic Graph
