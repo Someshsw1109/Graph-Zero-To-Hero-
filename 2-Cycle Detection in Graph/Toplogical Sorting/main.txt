@@ -3,3 +3,32 @@ Topological Sorting always in directed graph only.
 It always apply on DAG.
 
 DAG -> Directed Acyclic Graph
+
+
+Kahn's Algo (Basically It's a BFS method for Topological Sorting)
+
+--> Jiska Indegree 0 hua, Pehle usko Likh denge
+
+--> Uske baad hum ekk queue lenge,
+
+--> First of all jaisa maine first point me bola ki jiska indegree 0 hai usko hum pahle likhenge so hum queue me waise element ko append karenge jinka indegree 0 hai 
+
+--> Indegree kaise nikalenge => Just count the number of arrows pointing towards the current element for example 
+
+     
+    
+   0 -> 1 -> 2
+   ^    ^    |
+   |    |____|
+   3
+
+   To iss example me samjhenge ki basically indegree har ekk node ka kya hoga 
+
+   For 0 -- indegree 1 hoga kyunki 3 se jo arrow jaar raha hai wo 0 ki taraf pointed hai 
+   for 1 -- indegree 2 hoga kyunki 0 v point kar raha hai aur 2 v point kar raha hai
+   for 2 -- indegree 1 hoga kyunki only 1 point kar raha hai 2 ko,
+   for 3 -- indegree 0 hoga kyunki koi v arrow uski taraf point ni kar raha 
+
+--> Now ab jo queue me stored edges hain unko pop karte hue dekhte jaayenge ki uss edge se hum kahan kahan jaa sakte hain aur jahan jaayenge uss edge ki indegree ko 1 se minus karte jaayenge just say ekk dependancy ghata denge.... aur jab tak wo edge ka indegree 0 nahi hoga tab tak usko queue me nahi daalenge 
+
+--> At the end after checking all these things simply append all the required edges to the res = [] and return it.
