@@ -1,0 +1,9 @@
+DSU ---> Disjoint Set Union
+
+The intersection of all the given sets become null then we called it as Disjoint Set Union
+
+----> Operations in Disjoint Set Union <------
+
+(1) -> Combine Two Given Sets
+
+(2) -> Tell If Two Members Belongs to same set or not. (This is why we also called DSU as Union Find Algorithm)
