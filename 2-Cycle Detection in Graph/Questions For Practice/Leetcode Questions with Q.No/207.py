@@ -6,7 +6,6 @@ from typing import List
 
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        # Kahn's Algorithm
 
         from collections import defaultdict
         adj = defaultdict(list)
